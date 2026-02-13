@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>岁片转换器 | Sui Fragment Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">RHODES ISLAND</div>
+            <h1>岁片转换器</h1>
+            <div class="subtitle">SUI FRAGMENT CONVERTER</div>
+        </header>
+
+        <main>
+
+            <div class="global-controls">
+                <button id="main-mode-btn" class="ark-btn mode-switch-btn" data-mode="decimal">
+                    <span class="icon">⚡</span>
+                    <span class="btn-text">当前模式：十进制</span>
+                    <span class="btn-sub">点击切换至 十三进制</span>
+                </button>
+            </div>
+
+
+            <div class="tabs-container">
+                <button class="tab-btn active" data-tab="text">文字转换</button>
+                <button class="tab-btn" data-tab="image">图片生成</button>
+            </div>
+
+            <div class="converter-box">
+                <div class="input-group">
+                    <label for="input-text">输入 (数字/符号 或 汉字)</label>
+                    <textarea id="input-text" placeholder="输入..."></textarea>
+                </div>
+
+                <div class="exchange-icon">
+                    <span>⇅</span>
+                </div>
+
+
+                <div id="tab-content-text" class="tab-content">
+                    <div class="input-group">
+                        <div class="label-row">
+                            <label for="output-text">结果</label>
+                        </div>
+                        <div class="output-container">
+                            <textarea id="output-text" readonly></textarea>
+                        </div>
+                        <div class="actions">
+                            <button id="copy-btn" class="action-btn">复制结果</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="tab-content-image" class="tab-content hidden">
+                    <div class="input-group">
+                        <div class="label-row">
+                            <label>预览</label>
+                            <div id="image-options" class="image-options">
+                                <div class="toggle-container">
+                                    <label class="toggle-switch small">
+                                        <input type="checkbox" id="show-number-overlay">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span class="label-text">显示编号</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="output-container">
+                            <div id="output-image" class="image-display"></div>
+                        </div>
+                        
+                        <div id="fang-tip" class="fang-tip-box hidden">
+                            <del>💡只有一个人还没立绘</del>
+                        </div>
+
+                        <div class="actions">
+                            <button id="save-btn" class="action-btn">保存图片</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reference-table">
+                <h3>对照表</h3>
+                <div id="legend-grid" class="grid">
+                    <!-- Populated by JS -->
+                </div>
+                <div id="mode-info" class="mode-info">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="decorative-line"></div>
+            <p>SYSTEM ONLINE // PRTS</p>
+                <a href="https://cloverz.top" target="_blank" style="color: #fff;text-decoration: none;">Made By Clover_233</a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
