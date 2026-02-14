@@ -3,7 +3,7 @@
     --card-bg: #2b2b2b;
     --text-primary: #ffffff;
     --text-secondary: #b3b3b3;
-    --accent: #00C8FF; /* Cyan typical of Arknights UI */
+    --accent: #00C8FF; 
     --accent-dark: #008eb3;
     --accent-orange: #FF5000;
     --border-color: #444;
@@ -58,10 +58,10 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* Tabs Styling */
+
 .tabs-container {
     display: flex;
-    margin-bottom: -1px; /* Overlap with converter-box border */
+    margin-bottom: -1px;
     z-index: 1;
     position: relative;
     padding-left: 10px;
@@ -90,68 +90,17 @@ h1 {
     background-color: var(--card-bg);
     color: var(--accent);
     border-color: var(--accent);
-    border-bottom: 1px solid var(--card-bg); /* Hide bottom border to merge */
+    border-bottom: 1px solid var(--card-bg);
     font-weight: bold;
-    padding-bottom: 11px; /* Compensate for border-bottom */
+    padding-bottom: 11px;
 }
 
-/* Global Controls */
-.global-controls {
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: center;
-}
 
-.ark-btn {
-    background-color: #222;
-    color: var(--text-primary);
-    border: 1px solid var(--accent);
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 250px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 5px rgba(0, 200, 255, 0.2);
-}
-
-.ark-btn:hover {
-    background-color: rgba(0, 200, 255, 0.1);
-    box-shadow: 0 0 15px rgba(0, 200, 255, 0.4);
-    transform: translateY(-2px);
-}
-
-.ark-btn:active {
-    transform: translateY(1px);
-}
-
-.ark-btn .icon {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-    color: var(--accent);
-}
-
-.ark-btn .btn-text {
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.ark-btn .btn-sub {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin-top: 4px;
-}
-
-/* Tab Content Visibility */
 .tab-content.hidden {
     display: none;
 }
 
-/* Adjust Converter Box for Tabs */
+
 .converter-box {
     border-top-left-radius: 0;
     margin-top: 0;
@@ -215,7 +164,7 @@ input:checked + .slider:before {
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-/* Decorative corner */
+
 .converter-box::after {
     content: '';
     position: absolute;
@@ -250,7 +199,8 @@ input:checked + .slider:before {
     gap: 8px;
 }
 
-/* Small Toggle Switch */
+
+
 .toggle-switch.small {
     width: 36px;
     height: 20px;
@@ -288,10 +238,9 @@ label {
     color: var(--text-secondary);
     font-size: 0.9rem;
     text-transform: uppercase;
-    margin-bottom: 0; /* Reset since label-row handles it */
+    margin-bottom: 0; 
 }
 
-/* Restore margin for single labels if needed */
 .input-group > label {
     margin-bottom: 8px;
 }
@@ -447,6 +396,20 @@ textarea:focus {
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.item:hover {
+    background-color: #333;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.item:active {
+    transform: translateY(0);
 }
 
 .item span:first-child {
@@ -485,7 +448,7 @@ footer p {
     color: var(--text-secondary);
 }
 
-/* Scrollbar styling */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
